@@ -1,12 +1,12 @@
 Tài liệu hướng dẫn sử dụng EasyBuilder trực quan, dễ hiểu và dễ thực hành.
 
-### Tiêu chí tài liệu tốt
+### Hướng dẫn tốt nên là
 
 - video (ưu tiên hình gif) minh hoạ ngắn gọn, dễ hiểu 
 - chi tiết từng bước với ví dụ thực tế + source code
 - link tham khảo, mở rộng 
 
-### Tính năng cần làm tài liệu
+### Tính năng cần làm hướng dẫn
 1. [ ] Tạo mới một trang từ themes có sẵn, không bị lỗi css, js 
    - [ ] tạo layout, tạo page với layout vừa tạo
    - [ ] copy assets files, css, js, ... 
