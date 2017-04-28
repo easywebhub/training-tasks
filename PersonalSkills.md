@@ -40,10 +40,12 @@
 ### III. Editor VS Code, [link](https://code.visualstudio.com)
 > Khuyên dùng so với SublimeText, Atom, Notepad++, ... 
 
-- Hỗ trợ tối ưu cho git commit, shortcut, `Ctrl+Shift+G` to open git panel, `Ctrl + Enter` to commit, ... 
+- Hỗ trợ tối ưu cho git commit, shortcut, `Ctrl+Shift+G` to open git panel, `Ctrl + Enter` to commit, ... [chi-tiết](https://code.visualstudio.com/docs/editor/versioncontrol) 
 
-- Hỗ trợ tốt để viết Markdown, chế độ Preview tốt 
-- tích hợp `Command line`, shortcut ```Ctrl + ` ``` , cho phép sử dụng nhanh cmd như `git clone`, `git push`, `git pull`, `npm install`, ... 
+- Hỗ trợ tốt để viết Markdown, chế độ Preview tốt, [chi tiết](https://code.visualstudio.com/updates/v1_9#_markdown-preview-and-editor-integration) 
+
+- tích hợp `Command line`, shortcut ```Ctrl + ` ``` , cho phép sử dụng nhanh cmd như `git clone`, `git push`, `git pull`, `npm install`, ... [chi-tiết](https://code.visualstudio.com/docs/editor/integrated-terminal)
+
 - rất nhiều extensions và liên tục được cập nhật, bổ sung tính năng mới bởi Microsoft team 
 - tối ưu với lập trình front-end, html, css, js,...
 
