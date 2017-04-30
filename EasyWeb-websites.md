@@ -19,9 +19,9 @@
 
 
 ### OnePage Website
-> Là trang website chỉ có 1 trang duy nhất, website giới thiệu đơn giản, trang landingpage 
+> Là trang website chỉ có 1 trang duy nhất, ví dụ [startbootstrap-creative](https://blackrockdigital.github.io/startbootstrap-creative/) 
 
-- vẫn có menu nhưng các phần trong menu vẫn nằm trên chính trang đó
+- có menu nhưng các phần trên menu vẫn nằm trên chính trang đó
 - không cần sử dụng Partial layouts như footer, header, ... vì chỉ có 1 layout
 
 - Binding dữ liệu giữa Content và Layout : [expressions](http://handlebarsjs.com/expressions.html)
@@ -52,3 +52,52 @@
 
 - Các trang Danh Muc, hoặc Chủ đề có thể có giao diện riêng, bằng cách sử dụng Category, Tags Layouts tương ứng.
 
+## Cấu trúc dữ liệu Content
+
+### Dữ liệu của Page
+
+#### Dữ liệu mặc định của Page
+```json 
+
+```
+
+#### Các loại cấu trúc dữ liệu
+- fields :  `tittle`, `slug`, ...
+   - `{{title}}`
+
+- objects : biến chứa nhiều fields, hoặc objects bên trong:  
+
+   - binding theo đường dẫn  `{{object-path.field-name}}`
+   - hoặc binding fields trong một object cụ thể 
+   ``` 
+   {{#with object-name}}
+      {{@key}} : {{field-name}}
+   {{/with}}
+   ```
+- array: biến chứa danh sách đối tượng giống nhau
+   - lặp các phần từ trong array
+   ```json
+   <ul>
+    {{#each array-item}}
+       <li> {{@index}} : {{this}} </li>
+    {{/each}}
+   </ul>
+   ``` 
+   - sử dụng `@first`, `@last` cho phần tử đầu tiên hoặc cuối cùng trong 
+   ```json
+    {{#each array-item}}
+       {{#if @first}}
+         {{field-of-1st-item}}
+       {{/if}}
+    {{/each}}
+    ``` 
+> Tham khảo cú pháp chi tiết của [Handlebars](http://handlebarsjs.com/builtin_helpers.html)
+  
+### Dữ liệu của trang Danh Mục (Category)
+
+- mặc định có `default` (root) Category, được truy cập qua biến `AllCategory` 
+- mỗi quan hệ (cha-con) trong category định nghĩa theo cú pháp `sub-cate.parent-category` 
+- fields mặc định của mỗi category
+
+### Dữ liệu của trang Chủ Đề (Tags)
+> nằm trong biến `AllTags`
