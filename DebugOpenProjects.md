@@ -44,10 +44,15 @@ dòng text nằm trong code, thay vì nằm trong database.
 
 #### Các bước tìm kiếm cơ bản
 - Tìm kiếm các "text" đặc trưng trên giao diện
-   - kết quả: một số files chứa các text này.
-- Thử sai, loại trừ để tìm ra file chứa source chính xác
+   - kết quả tìm thấy: một số files chứa các text này.
+   - lựa chọn các files dạng source, như `.html, .js, .json, .css,...`
+
+- **Thử sai, loại trừ** để tìm ra file chứa source chính xác
    - sửa nội dung text, chạy lại chương trình để xem thay đổi có được cập nhật không
+   - nên sửa cùng lúc với các keyword riêng cho từng files, nhìn giao diện thay đổi để biết được chính xác file đã sửa.
+
 - Vọc code trong file source để hiểu hơn cách thức thực hiện
+   - tìm hiểu các code gần kề text đã tìm để biết được cơ chế hoạt động
 
 ### Dựa trên danh sách Commits
 - danh sách `Commits` trên github.com, ví dụ https://github.com/easywebhub/easyapp/commits/master
