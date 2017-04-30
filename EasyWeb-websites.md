@@ -76,7 +76,7 @@
    ```
 - array: biến chứa danh sách đối tượng giống nhau
    - lặp các phần từ trong array
-   ```json
+   ```
    <ul>
     {{#each array-item}}
        <li> {{@index}} : {{this}} </li>
@@ -84,7 +84,7 @@
    </ul>
    ``` 
    - sử dụng `@first`, `@last` cho phần tử đầu tiên hoặc cuối cùng trong 
-   ```json
+   ```
     {{#each array-item}}
        {{#if @first}}
          {{field-of-1st-item}}
