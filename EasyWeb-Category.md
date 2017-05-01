@@ -1,4 +1,7 @@
-A single category node contains
+
+### A Category Node
+
+#### Json Schema
 ```json
 {
     "children": [],
@@ -20,7 +23,9 @@ A single category node contains
     "path": ":categoryPath/page/:num/index.html"
 }
 ```
-Access using {{#with}} syntax
+
+#### Handlebarjs Binding
+- Access using {{#with}} syntax
 ```
 {{#with (lookupCategory AllCategory 'path-of-category') }}
    {{href}}
@@ -29,62 +34,77 @@ Access using {{#with}} syntax
 {{/with}}
 ```
 
-Access allItems of Category
+- Access allItems of Category
 ```
 {{#with AllCategory.files}}
 
 {{/with}}
 ```
-### A child category node is have structure as same as above
-# Pagination
-to access data of current category use **pagination** variable
-### pagination structure
-```
-	 {
-		template: pageOptions.template,
-		layout: pageOptions.layout,
-		contents: pageOptions.pageContents,
-		href: interpolate(pageOptions.path, pagination),
-		metadata: pageOptions.metadata ? pageOptions.metadata : {},
-		pagination: {
-			name: name,
-			category: category,
-			displayName: pageOptions.displayName,
-			categoryPath: categoryPath,
-			index: length,
-			num: length + 1,
-			pages: pages,
-			files: [],
-			getPages: createPagesUtility(pages, length),
-			previous: ,
-			next: ,
-			first: ,
-			last: ,
-		}
-		AllCategory: metadata.AllCategory,		
-	}
+ 
+ **A child category node is have structure as same as above**
+
+### Pagination
+> to access data of current category use **pagination** variable
+
+#### pagination structure
+```json
+{
+    template: pageOptions.template,
+    layout: pageOptions.layout,
+    contents: pageOptions.pageContents,
+    href: interpolate(pageOptions.path, pagination),
+    metadata: pageOptions.metadata ? pageOptions.metadata :{},
+    pagination: {
+        name: name,
+        category: category,
+        displayName: pageOptions.displayName,
+        categoryPath: categoryPath,
+        index: length,
+        num: length + 1,
+        pages: pages,
+        files: [],
+        getPages: createPagesUtility(pages, length),
+        previous: ,
+        next: ,
+        first: ,
+        last: ,
+    }
+    AllCategory: metadata.AllCategory,		
+}
 ```
 
-# helpers
+### Handlebar helpers
+
+#### lookupCategory
 ```
 /**
-    lookupCategory
+  lookupCategory
     @param {object} [AllCategory] - category tree object
     @param {string} [categoryPath] - category full path
     @param {string} [propertyPath] - string object path like in lookupEx
     @returns {object} - a category object
 */
-lookupCategory AllCategory 'tin-tuc.thoi-su.quoc-te' 'children'
 ```
+- `AllCategory` is a root Category, which contains all Categories of current website
 
-#### genBreadcrumb AllCategory 'tin-tuc.thoi-su.quoc-te'
-return array of category object
+- Ví dụ: `tin-tuc.thoi-su.quoc-te` is a Category, which has children (its sub-categories). To get its children, use the bellow syntax
+
+`lookupCategory AllCategory 'tin-tuc.thoi-su.quoc-te' 'children'`
+
+return:  array of categories
+
+#### genBreadcrumb AllCategory `category-path`
+
+- syntax `getBreadcrumb AllCategory 'tin-tuc.thoi-su.quoc-te'`
+
+- return array of categories
 
 #### lookupEx Object 'aa.bb.cc'
+
 return value of Object.aa.bb.cc
 
-### handlebar array access:
-	.:number
-	.[:number]
+#### handlebar array access:
+
+- `.[:number]`, ví dụ:   `array-items.[0]` the first items of array
 
 		
