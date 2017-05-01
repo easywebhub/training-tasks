@@ -43,17 +43,36 @@
  
  **A child category node is have structure as same as above**
 
+#### Sample Code
+
+- Lấy tất cả bài viết thuộc danh mục `tin-tuc` (đã được sắp xếp theo thứ tự mới nhất)
+```
+<h5>All posts of Category "tin-tuc"<h5>
+<ul>
+{{#each (lookupCategory AllCategory 'tin-tuc') }}
+   <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
+{{/each}}
+</ul>
+```
+
+- Lấy 4 bài viết đầu tiên thuộc danh mục 'tin-tuc.tin-van-hoa'
+```
+<h5>Get first 4 posts of Category 'tin-tuc.tin-van-hoa'<h5>
+<ul>
+{{#each (first (lookupCategory AllCategory 'tin-tuc.tin-van-hoa') 4) }}
+   <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
+{{/each}}
+</ul>
+```
+
 ### Pagination
-> to access data of current category use **pagination** variable
+> Lưu ý: Phân trang chỉ hoạt động trong trang Danh Mục của nó
+
+> Trong mỗi trang danh mục đều có biến mặc định `pagination` để quản lý việc phân trang. Sử dụng biến `pagination` để truy cập các thuộc tính liên quan tới phân trang
 
 #### pagination structure
 ```json
 {
-    template: pageOptions.template,
-    layout: pageOptions.layout,
-    contents: pageOptions.pageContents,
-    href: interpolate(pageOptions.path, pagination),
-    metadata: pageOptions.metadata ? pageOptions.metadata :{},
     pagination: {
         name: name,
         category: category,
@@ -69,8 +88,29 @@
         first: ,
         last: ,
     }
-    AllCategory: metadata.AllCategory,		
 }
+```
+- **Lưu ý**
+  - `pagination.files` chứa danh sách bài viết chi tiết đã được phân trang
+  - `pagination.num` tổng số trang
+
+#### Sample Code
+
+```
+<h5>PAGE FILES OF {{pagination.category}} - {{pagination.categoryDisplayName}}<h5>
+
+<ul>
+{{#each pagination.files}}
+	<li><a href="/{{ this.path }}">{{ this.title }}</a></li>
+{{/each}}
+</ul>
+
+{{#if pagination.previous}}
+	<a href="/{{pagination.previous.path}}">Previous page</a>
+{{/if}}
+{{#if pagination.next}}
+	<a href="/{{pagination.next.path}}">Next page</a>
+{{/if}}
 ```
 
 ### Handlebar helpers
