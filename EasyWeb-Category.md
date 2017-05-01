@@ -1,16 +1,17 @@
 A single category node contains
-```
+```json
 {
-    children: [],
-	parent: null,
-	href: 'url',
-	files: [],
-	category: '',	
-	"sortBy": "date",
+    "children": [],
+    "parent": null,
+    "href": 'url',
+    "files": [],
+    "category": 'cacbenh.mat',	
+    "sortBy": "date",
     "reverse": false,
-    "metadata": {
-		"ten": "Các bệnh mat "
-	},
+    "metadata": 
+    {
+	 "ten": "Các bệnh mat "
+    },
     "displayName": "các bệnh.mắt",
     "perPage": 10,
     "noPageOne": true,
