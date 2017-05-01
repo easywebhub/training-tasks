@@ -12,32 +12,37 @@
 - gửi kết quả thực hiện bằng cách `Pull | Merged Request`
 - `comment` trao đổi, review trực tiếp theo dòng code trên diff, commit 
 
-#### Tăng kỹ năng cá nhân 
+#### I.1 Tăng kỹ năng cá nhân 
 - kĩ năng chia nhỏ công việc, sắp xếp bố trí phù hơp
 - review công việc, 
 - cho phép người khác (giỏi hơn) dễ dàng biết và góp ý để cải thiện
 - tăng chất lượng công việc, tính khoa học, kĩ lưỡng, cẩn trọng của mỗi cá nhân 
 
-#### Tăng kỹ năng tương tác (team-work)
+#### I.2 Tăng kỹ năng tương tác (team-work)
 - code review, công việc review nhanh 
 - tương tác cụ thể, chi tiết trên từng commit
 - nhanh chóng biết được công việc của nhau để góp ý cải thiện
 
 ### II. Sử dụng Markdown để viết mô tả
 
-> Markdown (file có .md format) giúp nhanh chóng, dễ dàng mô tả vấn đề hơn so với Word, hoặc các dạng text files thông thường
-
-> chi tiết tham khảo [link](https://guides.github.com/features/mastering-markdown/)
-
+#### II.1 Lợi ích
+ - Cho phép view ngay trên browser dưới dạng trang web html (không cần download, mở bằng ứng dụng riêng như word, pdf,...)
+ - Cho phép hiển thị source code lập trình, hightlight theo từng ngôn ngữ (rất khó khăn với words, text file)
+ - nội dung hiển thị trực quan, `“The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible,”`
+ - mặc định sử dụng với github.com, gitlab.com, ...
+ - các công cụ Editor đều hỗ trợ tốt markdown, như VS Code, Atom, ...
+#### II.2 Bố cục nội dung 
  - chia ra từng phần lớn, ví dụ `### (h3)`, hoặc `#### (h4)`, các phần này cũng là link để chia sẻ nhanh khi cần 
-
  - liệt kê danh sách nhanh chóng, không thứ tự sử dụng `- hoặc +`, hoặc có thứ tự
- - hiển thị code, kí tự đặc biệt dễ dàng 
- - dễ đọc, dễ preview trên github hoặc các công cụ như VS Code, Atom, ...
- - cho phép xem nhanh mà không cần phải download, mở bằng ứng dụng riêng như PDF, Office, ...
+ - hiển thị source code rõ ràng 
  - kết hợp với git để dễ dàng theo dõi thay đổi, điều chỉnh 
+ 
+#### Tham khảo
+- [wikipedia](https://en.wikipedia.org/wiki/Markdown)
+- [github]([link](https://guides.github.com/features/mastering-markdown/)
+- http://readwrite.com/2012/04/17/why-you-need-to-learn-markdown/
 
-### III. Editor VS Code, [link](https://code.visualstudio.com)
+### III Visual Studio Code, [link](https://code.visualstudio.com)
 > Khuyên dùng so với SublimeText, Atom, Notepad++, ... 
 
 - Hỗ trợ tối ưu cho git commit, shortcut, `Ctrl+Shift+G` to open git panel, `Ctrl + Enter` to commit, ... [chi-tiết](https://code.visualstudio.com/docs/editor/versioncontrol) 
