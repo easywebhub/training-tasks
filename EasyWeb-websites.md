@@ -55,30 +55,33 @@
 ## Cấu trúc dữ liệu Content
 
 ### Dữ liệu của Page
-```json 
-{
-        "slug":        "slug-of-page",  
-        "title":       "title of Page",
-        "category":    "category",    //optional
-        "tag":         [],            //optional
-        "layout":      "layoutFileName",
-        "date":        "created-time",
-        "publishDate": "publish-time", //be hidden
-        "draft":       false,          //hidden, if true, not show on production
-        ....
-        "__content__" : "main content for detail page"  //be hidden
-        
-}
-```
+> tham khao chi tiet tai https://github.com/easywebhub/training-tasks/edit/master/EasyWeb-ContentofPage.md
+
 #### Dữ liệu mặc định của Page
 ```json 
-
+    "slug" : "xxx",   
+    "title" : "title of this page",
+    "layout" : "",   
+    "category" : "",  
+    "tag" : [],   
+    "date" : "create-of-time",    
+    
+    //page defined fields
+    "__content__" : "main content for detail page"
 ```
 
 #### Các loại cấu trúc dữ liệu
-- fields :  `tittle`, `slug`, ...
-   - `{{title}}`
+- `title`: tiêu đề của một trang 
+- `slug`: id của trang, không dấu, sinh ra tự động từ `title`, sử dụng để tạo url theo dạng  `http://your-domain.com/slug-value`
+- `category`:  dropdown box, users lựa chọn
+   - giá trị là  `category.sub-category.sub-sub-cate`
+   - mối quan hệ sử dụng dấu `.` để tách biệt
+- `tags` :  multiple checkbox, cho users chọn
+   - default là array rỗng `[]`
 
+- fields :  `tittle`, `slug`, `layout`, ...
+   - `{{title}}`
+   
 - objects : biến chứa nhiều fields, hoặc objects bên trong:  
 
    - binding theo đường dẫn  `{{object-path.field-name}}`
@@ -109,10 +112,12 @@
   
 ### Dữ liệu của trang Danh Mục (Category)
 
+> chi tiết tham khảo https://github.com/easywebhub/training-tasks/blob/master/EasyWeb-Category.md
+
 - mặc định có `default` (root) Category, được truy cập qua biến `AllCategory` 
 - mỗi quan hệ (cha-con) trong category định nghĩa theo cú pháp `sub-cate.parent-category` 
 - fields mặc định của mỗi category
-- chi tiết tham khảo https://github.com/easywebhub/training-tasks/blob/master/EasyWeb-Category.md
+
 
 ### Dữ liệu của trang Chủ Đề (Tags)
 > nằm trong biến `AllTags`
