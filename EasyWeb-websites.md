@@ -42,12 +42,21 @@
 ### MultiplePage Website
 > nhiều trang sử dụng chung 1 layout, như trang bài viết chi tiết, trang sản phẩm chi tiết, ...
 
+- trang chi tiết, ví dụ
+   - bài viết chi tiết, http://vnexpress.net/tin-tuc/thoi-su/thai-binh-xay-thap-bieu-tuong-300-ty-dong-3579568.html
+   - sản phẩm chi tiết https://vienthonga.vn/iphone-7-plus-128gb-red.html
+   - bài viết  thuộc 1 danh mục (category) duy nhất  nhưng có thể thuộc nhiều chủ đề (tags) khác nhau
 - Các trang dùng chung 1 layout sẽ được tóm lượt trong trang Danh mục (Category Page) và được sắp xếp theo thứ tự: mới cập nhật, ...
-
+   - danh mục tin tức: http://vnexpress.net/tin-tuc/thoi-su
+   - danh mục sản phẩm: https://vienthonga.vn/dien-thoai-smartphones/apple-iphone
+   - có mối quan hệ thứ tự cha-con (`category.sub-category`)
+   
 - Trường hợp trang Danh mục có nhiều trang chi tiết, thì sẽ cần Phân Trang (Pagination) thành từng page 
-
+   - xem phân trang dưới cùng http://vnexpress.net/tin-tuc/thoi-su
+   
 - Các trang chi tiết có thể được phân chia theo nhiều chủ đề (Tags) khác nhau của trang web
-
+   - các chủ đề là đồng đẳng, không có quan hệ cha-con
+    
 - Các trang có cùng chung 1 chủ đề, sẽ thuộc trang Chủ đề (Tags Page) riêng và được sắp xếp theo thứ tự, cũng như được Phân Trang tương tự trang Danh Mục (Category)
 
 - Các trang Danh Muc, hoặc Chủ đề có thể có giao diện riêng, bằng cách sử dụng Category, Tags Layouts tương ứng.
@@ -78,7 +87,7 @@
    - mối quan hệ sử dụng dấu `.` để tách biệt
 - `tags` :  multiple checkbox, cho users chọn
    - default là array rỗng `[]`
-
+- `__content__`: mặc định không hiển thị, chứa nội dung chính của trang chi tiết, như bài viết 
 - fields :  `tittle`, `slug`, `layout`, ...
    - `{{title}}`
    
