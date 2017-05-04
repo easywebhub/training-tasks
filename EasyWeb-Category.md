@@ -6,9 +6,9 @@
 {
     "children": [],
     "parent": null,
-    "href": 'url',
+    "href": "url",
     "files": [],
-    "category": 'cacbenh.mat',	
+    "category": "cacbenh.mat",	
     "sortBy": "date",
     "reverse": false,
     "metadata": 
@@ -71,7 +71,7 @@
 > Trong mỗi trang danh mục đều có biến mặc định `pagination` để quản lý việc phân trang. Sử dụng biến `pagination` để truy cập các thuộc tính liên quan tới phân trang
 
 #### pagination structure
-```json
+```S
 {
     pagination: {
         name: name,
