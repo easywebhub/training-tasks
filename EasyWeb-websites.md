@@ -27,7 +27,7 @@
 - Binding dữ liệu giữa Content và Layout : [expressions](http://handlebarsjs.com/expressions.html)
 
 ### SinglePage Website 
-> gồm nhiều trang, mỗi trang có 1 layout riêng
+> phức tạp hơn OnePage, gồm nhiều trang, mỗi trang có 1 layout riêng
 
 - có phần  dùng chung giữa các trang này
    - footer, header, ... nằm trong các Partial layouts tương ứng
@@ -40,7 +40,7 @@
    - cú pháp binding:  `{{meta-file-name.field-path}}`, ví dụ `{{global.title}}` 
 
 ### MultiplePage Website
-> nhiều trang sử dụng chung 1 layout, như trang bài viết chi tiết, trang sản phẩm chi tiết, ...
+> phức tạp hơn SinglePage websites, gồm nhiều trang sử dụng chung 1 layout, như trang bài viết chi tiết, trang sản phẩm chi tiết, ...
 
 - trang chi tiết, ví dụ
    - bài viết chi tiết, http://vnexpress.net/tin-tuc/thoi-su/thai-binh-xay-thap-bieu-tuong-300-ty-dong-3579568.html
