@@ -55,7 +55,21 @@
 ## Cấu trúc dữ liệu Content
 
 ### Dữ liệu của Page
-
+```json 
+{
+        "slug":        "slug-of-page",  
+        "title":       "title of Page",
+        "category":    "category",
+        "tag":         [],
+        "layout":      "layoutFileName",
+        "date":        getCurrentISODate(),
+        "publishDate": getCurrentISODate(), 
+        "draft":       false,
+        ....
+        "__content__" : " : "main content for detail page"
+        
+}
+```
 #### Dữ liệu mặc định của Page
 ```json 
 
@@ -98,6 +112,7 @@
 - mặc định có `default` (root) Category, được truy cập qua biến `AllCategory` 
 - mỗi quan hệ (cha-con) trong category định nghĩa theo cú pháp `sub-cate.parent-category` 
 - fields mặc định của mỗi category
+- chi tiết tham khảo https://github.com/easywebhub/training-tasks/blob/master/EasyWeb-Category.md
 
 ### Dữ liệu của trang Chủ Đề (Tags)
 > nằm trong biến `AllTags`
