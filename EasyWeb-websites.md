@@ -59,14 +59,14 @@
 {
         "slug":        "slug-of-page",  
         "title":       "title of Page",
-        "category":    "category",
-        "tag":         [],
+        "category":    "category",    //optional
+        "tag":         [],            //optional
         "layout":      "layoutFileName",
-        "date":        getCurrentISODate(),
-        "publishDate": getCurrentISODate(), 
-        "draft":       false,
+        "date":        "created-time",
+        "publishDate": "publish-time", //be hidden
+        "draft":       false,          //hidden, if true, not show on production
         ....
-        "__content__" : " : "main content for detail page"
+        "__content__" : "main content for detail page"  //be hidden
         
 }
 ```
