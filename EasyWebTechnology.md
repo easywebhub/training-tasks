@@ -1,5 +1,5 @@
 
-## Các công nghệ lựa chọn 
+## Các công nghệ đã lựa chọn và đang sử dụng 
 > Bao gồm 3 phần lớn: Prototype, Front-end Web, Backend API sử dụng xây dựng website hướng tới 2 đối tượng chính:
 - Web Front: là website hướng tới người dùng cuối (end-users), ví dụ website công ty, trang blog, trang ecommerce,...
 - Web Admin: còn gọi là ứng dụng web, hướng tới ngườtysử dụng là nhân viên nội bộ của công ty (internal users), hoặc nhân viên đối tác để quản lý vận hành các hoạt động của công ty 
@@ -23,7 +23,7 @@
    - định nghĩa dữ liệu trong file .md
    - binding dữ liệu vào layout 
 
-- kế thừa các template có sẵn, ví dụ [PagesAdmin]() hoặc lập trình layout dựa trên thiết kế Photoshop, ...
+- kế thừa các template có sẵn, ví dụ [PagesAdmin](http://preview.themeforest.net/item/pages-admin-dashboard-template-web-app/full_screen_preview/9694847?_ga=2.56625578.1422652329.1494831637-1025025626.1494493651) hoặc lập trình layout dựa trên thiết kế Photoshop, ...
    - mức cơ bản: cắt html, css
    - mức nâng cao: lập trìnhtrình sass, less, ... 
 ### Dự án đã thực hiện:
@@ -35,6 +35,7 @@
 - Web Admin: dự án [Kieu-hoi](https://vinaas.github.io/admin-page-template/doitac.html) 
    - sử dụng metalsmith, handlebars, và dùng Pages Admin themes mua từ themeforest
    - source code [link](https://github.com/vinaas/admin-page-template)
+   
 ### Front-end web
 > hoạt động trên môi trường Client (Browsers, Software, Mobile App) 
 > kế thừa các kết quả từ Prototype bên trên 
