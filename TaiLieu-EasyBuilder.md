@@ -45,12 +45,15 @@ Tài liệu hướng dẫn sử dụng EasyBuilder trực quan, dễ hiểu và 
    - [ ] dùng F1 để insert nhanh biến global `:Meta` 
 
 
-4. [ ] tạo Danh mục (category)
+#### 4. Danh Mục (Category)
+> tham khảo  [Category](/EasyWeb-Category.md)
+
+- [ ] tạo Danh mục (category)
    - [ ] tạo category và sub-category
    - [ ] layout mặc định của trang danh mục `default.category.html` 
   
 
-5. [ ] hiển thị trang danh mục
+- [ ] hiển thị trang danh mục
    - [ ] hiển thị danh sách bài viết cùng 1 category
    - [ ] hiển thị phần phân trang 
    - [ ] tạo layout mới cho trang danh mục
