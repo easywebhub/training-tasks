@@ -7,21 +7,43 @@ Tài liệu hướng dẫn sử dụng EasyBuilder trực quan, dễ hiểu và 
 - link tham khảo, mở rộng 
 
 ### Tính năng cần làm hướng dẫn
-1. [ ] Tạo mới một trang từ themes có sẵn, không bị lỗi css, js 
-   - [ ] tạo layout, tạo page với layout vừa tạo
-   - [ ] copy assets files, css, js, ... 
-   - [ ] điều chỉnh đường dẫn cho phù hợp để trang hiển thị đúng layout 
+#### 1. [ ] Tạo mới một trang từ themes có sẵn, không bị lỗi css, js 
+- [ ] edit layout có sẵn như index.html, hoặc tạo layout mới,
+   - dựa trên html source (page source) của theme có sẵn
+   - [ ] tạo page với layout vừa tạo
+- [ ] bổ sung assets files mà theme đang sử dụng, như css, js, ... 
+   - copy vào phần Asset của website 
+   - [ ] điều chỉnh đường dẫn để trang hiển thị đúng layout 
 
-2. [ ] tách dữ liệu ra khỏi layout 
-   - [ ] tạo biến và binding vào trong layout
-   - [ ] sử dụng F1, F2 để tạo biến và binding nhanh
-   - [ ] config biến để hiển thị input phù hợp, ví dụ datetime picker, upload form, true/false, ...
-   - [ ] biến là object và các thuộc tính bên trong 
+#### 2. [ ] tách dữ liệu ra khỏi layout để users co thể điều chỉnh 
+- [ ] tạo biến trong Config
+   - sử dụng F2 để tạo biến nhanh trong phần layout 
+- [ ] binding biến vừa tạo vào trong layout
+   - [ ] sử dụng F1 để tìm kiếm với prefix `:DATA` và insert nhanh 
 
-3. [ ] tạo partial các phần dùng chung giữa các trang
-   - [ ] partial cho header, footer, nav-bar, ...
+- [ ] config biến để hiển thị input phù hợp, 
+   - [ ] ví dụ datetime picker, upload form, true/false, ...
+   - [ ] đổi sang object và định nghĩa các thuộc tính bên trong 
+
+#### 3. [ ] tạo partial các phần dùng chung giữa các trang
+- [ ] partial cho header, footer, nav-bar, ...
    - [ ] dùng F3 để tạo nhanh partial 
-   - [ ] tạo biến global trong phần meta và binding và partial
+   - [ ] dùng F1 để insert nhanh partial có sẵn `:Partial` 
+
+- [ ] extend partial có sẵn, ví dụ `partial/default.html`
+     
+   - khai báo block tên "main" sẽ mở rộng trong default.html `{{#block "main"}} {{{contents}}} {{/block}}`
+   - kế thừa trong layout với cú pháp 
+```
+{{#extend "body"}} 
+  {{#content "main"}} 
+    ... 
+  {{/content}}
+{{/extend}}
+```
+- [ ] tạo biến global trong phần meta và binding và partial
+   - [ ] dùng F1 để insert nhanh biến global `:Meta` 
+
 
 4. [ ] tạo Danh mục (category)
    - [ ] tạo category và sub-category
