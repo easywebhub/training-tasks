@@ -1,5 +1,9 @@
 # Chào mừng các bạn bắt đầu với EasyWeb
 
+## Tài liệu 
+- Danh sách tính năng, [EasyBuilder](https://github.com/easywebhub/tasks/blob/master/doc/EasyBuilder.md), [EasyWeb](https://github.com/easywebhub/tasks/blob/master/doc/EasywebHub.md)
+- Tài liệu sử dụng EasyBuilder, [chitiet](/TaiLieu-EasyBuilder.md)
+
 ### Nhân Sự Mới
 - Là các bạn sinh viên, mới ra trường 
 - Là các bạn muốn chuyển sang ngành công nghệ thông tin

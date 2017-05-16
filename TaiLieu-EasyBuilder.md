@@ -23,7 +23,7 @@ Tài liệu hướng dẫn sử dụng EasyBuilder trực quan, dễ hiểu và 
    - [ ] dùng F3 để tạo nhanh partial 
    - [ ] tạo biến global trong phần meta và binding và partial
 
-4. [ ] tạo category 
+4. [ ] tạo Danh mục (category)
    - [ ] tạo category và sub-category
    - [ ] layout mặc định của trang danh mục `default.category.html` 
   
@@ -34,3 +34,7 @@ Tài liệu hướng dẫn sử dụng EasyBuilder trực quan, dễ hiểu và 
    - [ ] tạo layout mới cho trang danh mục
    - [ ] cấu hình cho category sử dụng layout mới
   
+### Tham khảo thêm
+- Danh sách tính năng https://github.com/easywebhub/tasks/blob/master/doc/EasyBuilder.md
+- [Category](/EasyWeb-Category.md)
+- 
