@@ -64,7 +64,7 @@
 ## Cấu trúc dữ liệu Content
 
 ### Dữ liệu của Page
-> tham khao chi tiet tai https://github.com/easywebhub/training-tasks/edit/master/EasyWeb-ContentofPage.md
+> tham khao chi tiet tai [EasyWeb-ContentOfPage](/EasyWeb-ContentofPage.md)
 
 #### Dữ liệu mặc định của Page
 ```json 
@@ -121,12 +121,11 @@
   
 ### Dữ liệu của trang Danh Mục (Category)
 
-> chi tiết tham khảo https://github.com/easywebhub/training-tasks/blob/master/EasyWeb-Category.md
+> chi tiết tham khảo [Category](/EasyWeb-Category.md)
 
 - mặc định có `default` (root) Category, được truy cập qua biến `AllCategory` 
 - mỗi quan hệ (cha-con) trong category định nghĩa theo cú pháp `sub-cate.parent-category` 
 - fields mặc định của mỗi category
-
 
 ### Dữ liệu của trang Chủ Đề (Tags)
 > nằm trong biến `AllTags`
