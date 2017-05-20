@@ -31,14 +31,21 @@
    {{href}}
    {{metadata.ten}}
    {{children.[0]}}  // or {{children.0}}
+   {{#each files}}
+      {{path}}
+      {{slug}}
+      {{title}}
+   {{/each}}
 {{/with}}
 ```
 
 - Access allItems of Category
 ```
-{{#with AllCategory.files}}
-
-{{/with}}
+{{#each AllCategory.files}}
+      {{path}}
+      {{slug}}
+      {{title}}
+{{/each}}
 ```
  
  **A child category node is have structure as same as above**
