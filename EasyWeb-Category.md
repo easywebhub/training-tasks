@@ -23,6 +23,10 @@
     "path": ":categoryPath/page/:num/index.html"
 }
 ```
+- `children`: list of children category, each of them have the same data schema of paren
+- `parent`: name of parent category, `null` if current category is default (root)
+- `href`: of this category
+- `files`: list of detail page belonged to current category
 
 #### Handlebarjs Binding
 - Access using {{#with}} syntax
