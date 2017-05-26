@@ -56,19 +56,19 @@
 
 #### Sample Code
 
-- Lấy tất cả bài viết thuộc danh mục `tin-tuc` (đã được sắp xếp theo thứ tự mới nhất)
+- Lấy tất cả bài viết thuộc danh mục `default.news` (đã được sắp xếp theo thứ tự mới nhất)
 ```
-<h5>All posts of Category "tin-tuc"<h5>
+<h5>All posts of Category "default.news"<h5>
 <ul>
-   {{#each (lookupCategory AllCategory 'tin-tuc' 'files')}} 
+   {{#each (lookupCategory AllCategory 'default.news' 'files')}} 
      <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
    {{/each}}
 </ul>
 ```
 
 ```
-<h5>Other way to get posts of Category "tin-tuc"<h5>
-{{#with (lookupCategory AllCategory 'tin-tuc') }}
+<h5>Other way to get posts of Category "default.news"<h5>
+{{#with (lookupCategory AllCategory 'default.news') }}
  <ul>
    {{#each this.files}} 
    <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
@@ -77,11 +77,11 @@
 {{/with}}
 ```
 
-- Lấy 4 bài viết đầu tiên thuộc danh mục 'tin-tuc.tin-van-hoa'
+- Lấy 4 bài viết đầu tiên thuộc danh mục 'default.news'
 ```
-<h5>Get first 4 posts of Category 'tin-tuc.tin-van-hoa'<h5>
+<h5>Get first 4 posts of Category 'default.news'<h5>
 <ul>
-{{#each (first (lookupCategory AllCategory 'tin-tuc.tin-van-hoa') 4) }}
+{{#each (first (lookupCategory AllCategory 'default.news' 'files') 4) }}
    <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
 {{/each}}
 </ul>
