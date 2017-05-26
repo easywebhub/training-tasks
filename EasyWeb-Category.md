@@ -60,10 +60,21 @@
 ```
 <h5>All posts of Category "tin-tuc"<h5>
 <ul>
-{{#each (lookupCategory AllCategory 'tin-tuc') }}
-   <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
-{{/each}}
+   {{#each (lookupCategory AllCategory 'tin-tuc' 'files')}} 
+     <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
+   {{/each}}
 </ul>
+```
+
+```
+<h5>Other way to get posts of Category "tin-tuc"<h5>
+{{#with (lookupCategory AllCategory 'tin-tuc') }}
+ <ul>
+   {{#each this.files}} 
+   <li><a href="/{{ this.path }}">{{ this.title }}</a></li>
+   {{/each}}
+</ul>
+{{/with}}
 ```
 
 - Lấy 4 bài viết đầu tiên thuộc danh mục 'tin-tuc.tin-van-hoa'
