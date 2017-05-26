@@ -16,13 +16,21 @@
 }
 ---
 ```
-### Get DisplayName Of Category
+### Show displayName Of Category
 ```
 {{#with (lookupCategory AllCategory category)}}
    <a href="/{{href}}" rel="category tag">
      {{displayName}}
    </a>
 {{/with}}
+```
+
+### Show datetime with format
+
+```
+{{moment  date format ="dddd, DD MMMM YYYY HH:mm" }}
+
+{{moment  date lang ="vi" format ="dddd, DD MMMM YYYY HH:mm" }}
 ```
 
 ### **Always show** fields
