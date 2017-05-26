@@ -16,6 +16,14 @@
 }
 ---
 ```
+### Get DisplayName Of Category
+```
+{{#with (lookupCategory AllCategory category)}}
+   <a href="/{{href}}" rel="category tag">
+     {{displayName}}
+   </a>
+{{/with}}
+```
 
 ### **Always show** fields
 - `slug` : id of a pge, a part of url, auto generate from title e.g : abc => `http://domain.com/abc`, 
